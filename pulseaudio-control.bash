@@ -10,22 +10,23 @@ OSD="no"  # On Screen Display message for KDE if enabled
 INC=2  # Increment when lowering/rising the volume
 MAX_VOL=130  # Maximum volume
 AUTOSYNC="no"  # All programs have the same volume if enabled
-VOLUME_ICONS=( "# " "# " "# " )  # Volume icons array, from lower volume to higher
-MUTED_ICON="# "  # Muted volume icon
+VOLUME_ICONS=( " " " " " " )  # Volume icons array, from lower volume to higher
+MUTED_ICON="ﱝ "  # Muted volume icon
 MUTED_COLOR="%{F#6b6b6b}"  # Color when the audio is muted
 NOTIFICATIONS="no"  # Notifications when switching sinks if enabled
-SINK_ICON="# "  # Icon always shown to the left of the default sink names
+SINK_ICON=""  # Icon always shown to the left of the default sink names
 
 # Blacklist of PulseAudio sink names when switching between them. To obtain
 # the names of your active sinks, use `pactl list sinks short`.
 SINK_BLACKLIST=(
-    "alsa_output.usb-SinkYouDontUse-00.analog-stereo"
+    "alsa_output.pci-0000_00_14.2.iec958-stereo"
 )
 
 # Maps PulseAudio sink names to human-readable names
 declare -A SINK_NICKNAMES
-SINK_NICKNAMES["alsa_output.usb-SomeManufacturer_SomeUsbSoundcard-00.analog-stereo"]="External Soundcard"
-
+SINK_NICKNAMES["alsa_output.usb-FiiO_DigiHug_USB_Audio-01.analog-stereo"]=" FiiO DigiHub"
+SINK_NICKNAMES["alsa_output.usb-DisplayLink_dynadock_U3.0_10212411-02.analog-stereo"]="蓼 Dynadock"
+SINK_NICKNAMES["alsa_output.pci-0000_01_00.1.hdmi-stereo"]=" HDMI"
 
 # Environment & global constants for the script
 LANGUAGE=en_US  # Some calls depend on English outputs of pactl
