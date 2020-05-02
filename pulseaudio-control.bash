@@ -24,9 +24,12 @@ SINK_BLACKLIST=(
 
 # Maps PulseAudio sink names to human-readable names
 declare -A SINK_NICKNAMES
+# Mimir
 SINK_NICKNAMES["alsa_output.usb-FiiO_DigiHug_USB_Audio-01.analog-stereo"]=" FiiO DigiHub"
 SINK_NICKNAMES["alsa_output.usb-DisplayLink_dynadock_U3.0_10212411-02.analog-stereo"]="蓼 Dynadock"
 SINK_NICKNAMES["alsa_output.pci-0000_01_00.1.hdmi-stereo"]=" HDMI"
+# Bur
+SINK_NICKNAMES["alsa_output.pci-0000_00_1b.0.analog-stereo"]=" Internal"
 
 # Environment & global constants for the script
 LANGUAGE=en_US  # Some calls depend on English outputs of pactl
