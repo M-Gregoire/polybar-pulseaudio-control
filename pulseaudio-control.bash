@@ -30,7 +30,8 @@ SINK_NICKNAMES["alsa_output.usb-DisplayLink_dynadock_U3.0_10212411-02.analog-ste
 SINK_NICKNAMES["alsa_output.pci-0000_01_00.1.hdmi-stereo"]=" HDMI"
 # Bur
 SINK_NICKNAMES["alsa_output.pci-0000_00_1b.0.analog-stereo"]=" Internal"
-
+# Bluetooth headset
+SINK_NICKNAMES["bluez_sink.CC_98_8B_A7_A0_7E.a2dp_sink"]=" Sony headset"
 # Environment & global constants for the script
 LANGUAGE=en_US  # Some calls depend on English outputs of pactl
 END_COLOR="%{F-}"
